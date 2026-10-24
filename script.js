@@ -1,0 +1,4 @@
+const menu = document.getElementById('menubtn'), links = document.getElementById('navlinks');
+menu.addEventListener('click', () => { const open = links.classList.toggle('open'); menu.setAttribute('aria-expanded', String(open)); });
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); }));
+document.getElementById('year').textContent = new Date().getFullYear();
